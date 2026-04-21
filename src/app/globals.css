@@ -1,0 +1,112 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+/* =========================================================
+   TAILWIND v4 @theme — maps Curve tokens into Tailwind utilities
+   Mirrors the intent of the style guide's tailwind.config.ts block
+   (design-system-2026.html section 11).
+   ========================================================= */
+@theme inline {
+  --color-accent:     var(--accent);
+  --color-accent-50:  var(--accent-50);
+  --color-accent-100: var(--accent-100);
+  --color-accent-200: var(--accent-200);
+  --color-accent-300: var(--accent-300);
+  --color-accent-400: var(--accent-400);
+  --color-accent-500: var(--accent-500);
+  --color-accent-600: var(--accent-600);
+  --color-accent-700: var(--accent-700);
+  --color-accent-800: var(--accent-800);
+  --color-accent-900: var(--accent-900);
+  --color-accent-950: var(--accent-950);
+
+  --color-neutral-0:    var(--neutral-0);
+  --color-neutral-50:   var(--neutral-50);
+  --color-neutral-100:  var(--neutral-100);
+  --color-neutral-200:  var(--neutral-200);
+  --color-neutral-300:  var(--neutral-300);
+  --color-neutral-400:  var(--neutral-400);
+  --color-neutral-500:  var(--neutral-500);
+  --color-neutral-600:  var(--neutral-600);
+  --color-neutral-700:  var(--neutral-700);
+  --color-neutral-800:  var(--neutral-800);
+  --color-neutral-900:  var(--neutral-900);
+  --color-neutral-950:  var(--neutral-950);
+  --color-neutral-1000: var(--neutral-1000);
+
+  --color-surface-base:   var(--surface-base);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-text-primary:   var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted:     var(--text-muted);
+  --color-border-subtle:  var(--border-subtle);
+
+  --font-ui:              var(--font-ui);
+  --font-display:         var(--font-display);
+  --font-display-left:    var(--font-display-left);
+  --font-display-middle:  var(--font-display-middle);
+  --font-display-right:   var(--font-display-right);
+  --font-mono:            var(--font-mono);
+
+  --text-xs:   var(--text-xs);
+  --text-sm:   var(--text-sm);
+  --text-base: var(--text-base);
+  --text-lg:   var(--text-lg);
+  --text-xl:   var(--text-xl);
+  --text-2xl:  var(--text-2xl);
+  --text-3xl:  var(--text-3xl);
+  --text-4xl:  var(--text-4xl);
+  --text-5xl:  var(--text-5xl);
+  --text-6xl:  var(--text-6xl);
+
+  --radius-default: var(--radius-default);
+  --radius-sm:      var(--radius-sm);
+  --radius-md:      var(--radius-md);
+  --radius-lg:      var(--radius-lg);
+  --radius-xl:      var(--radius-xl);
+  --radius-2xl:     var(--radius-2xl);
+  --radius-full:    var(--radius-full);
+
+  --shadow-elev-1:    var(--elev-1);
+  --shadow-elev-2:    var(--elev-2);
+  --shadow-elev-3:    var(--elev-3);
+  --shadow-elev-4:    var(--elev-4);
+  --shadow-glow:      var(--elev-glow);
+  --shadow-brutal:    var(--elev-brutal);
+  --shadow-brutal-lg: var(--elev-brutal-lg);
+
+  --blur-subtle:   8px;
+  --blur-standard: 22px;
+  --blur-hero:     40px;
+}
+
+/* Base */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--font-ui);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  color: var(--text-primary);
+  background: var(--surface-base);
+  -webkit-font-smoothing: antialiased;
+  transition:
+    background var(--dur-slow) var(--ease-out),
+    color var(--dur-slow) var(--ease-out);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 { margin: 0; line-height: var(--leading-display); }
+a {
+  color: var(--accent-300);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+a:hover { color: var(--accent-200); }
+
+/* Selection */
+::selection {
+  background: color-mix(in oklch, var(--accent) 40%, transparent);
+  color: var(--neutral-0);
+}

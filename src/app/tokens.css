@@ -1,0 +1,184 @@
+/* =========================================================
+   CURVE TOKENS — midcurved design system
+   Source of truth: 02_projects/midcurved-media/design-system-2026.html
+   Copied verbatim from the style guide :root + mode skins.
+   Do not edit in isolation — changes flow from the style guide.
+   ========================================================= */
+
+:root {
+  color-scheme: light dark;
+
+  /* === Accent — Midcurved yellow === */
+  --accent: oklch(0.82 0.20 85);
+  --accent-hue: 85;
+  --accent-50:  oklch(from var(--accent) 0.97 c h);
+  --accent-100: oklch(from var(--accent) 0.94 c h);
+  --accent-200: oklch(from var(--accent) 0.88 c h);
+  --accent-300: oklch(from var(--accent) 0.82 c h);
+  --accent-400: oklch(from var(--accent) 0.78 c h);
+  --accent-500: var(--accent);
+  --accent-600: oklch(from var(--accent) 0.62 c h);
+  --accent-700: oklch(from var(--accent) 0.48 c h);
+  --accent-800: oklch(from var(--accent) 0.36 c h);
+  --accent-900: oklch(from var(--accent) 0.24 c h);
+  --accent-950: oklch(from var(--accent) 0.16 c h);
+
+  /* Neutrals — hue 85, chroma near 0 */
+  --neutral-0:    oklch(1 0 0);
+  --neutral-50:   oklch(0.98 0.004 85);
+  --neutral-100:  oklch(0.95 0.006 85);
+  --neutral-200:  oklch(0.90 0.008 85);
+  --neutral-300:  oklch(0.82 0.010 85);
+  --neutral-400:  oklch(0.68 0.012 85);
+  --neutral-500:  oklch(0.55 0.014 85);
+  --neutral-600:  oklch(0.44 0.014 85);
+  --neutral-700:  oklch(0.34 0.012 85);
+  --neutral-800:  oklch(0.24 0.010 85);
+  --neutral-900:  oklch(0.16 0.008 85);
+  --neutral-950:  oklch(0.10 0.006 85);
+  --neutral-1000: oklch(0 0 0);
+
+  /* Status — calm defaults */
+  --status-info:    oklch(0.68 0.15 240);
+  --status-success: oklch(0.70 0.14 155);
+  --status-warn:    oklch(0.78 0.14 75);
+  --status-danger:  oklch(0.60 0.19 25);
+
+  /* Venture accents (per the Curve brand map) */
+  --venture-rikos:          oklch(0.82 0.20 85);   /* yellow */
+  --venture-vibecode:       oklch(0.68 0.26 340);  /* magenta */
+  --venture-godmodepod:     oklch(0.60 0.22 25);   /* red */
+  --venture-beclaire:       oklch(0.68 0.18 245);  /* blue */
+  --venture-accountability: oklch(0.82 0.20 85);   /* yellow */
+  --venture-hotcold:        oklch(0.82 0.20 85);   /* yellow */
+  --venture-predictmrr:     oklch(0.82 0.20 85);   /* yellow */
+
+  /* Type families */
+  --font-ui:              var(--font-inter), "Inter", system-ui, -apple-system, sans-serif;
+  --font-display-left:    var(--font-inter), "Inter", serif;
+  --font-display-middle:  var(--font-bricolage), "Bricolage Grotesque", "Inter", sans-serif;
+  --font-display-right:   var(--font-caprasimo), "Caprasimo", "Bricolage Grotesque", serif;
+  --font-mono:            var(--font-jetbrains), "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Fluid type scale */
+  --text-xs:   clamp(0.75rem, 0.70rem + 0.25vw, 0.875rem);
+  --text-sm:   clamp(0.875rem, 0.82rem + 0.28vw, 1rem);
+  --text-base: clamp(1rem, 0.93rem + 0.35vw, 1.125rem);
+  --text-lg:   clamp(1.125rem, 1.04rem + 0.42vw, 1.3rem);
+  --text-xl:   clamp(1.3rem, 1.18rem + 0.58vw, 1.55rem);
+  --text-2xl:  clamp(1.55rem, 1.35rem + 1vw, 2rem);
+  --text-3xl:  clamp(2rem, 1.6rem + 2vw, 2.8rem);
+  --text-4xl:  clamp(2.5rem, 1.8rem + 3.5vw, 4rem);
+  --text-5xl:  clamp(3rem, 2rem + 5vw, 5.5rem);
+  --text-6xl:  clamp(3.5rem, 2.2rem + 7vw, 7rem);
+
+  --leading-body:    1.55;
+  --leading-display: 1.02;
+  --tracking-tight:  -0.03em;
+  --tracking-wide:   0.04em;
+  --tracking-mega:   0.12em;
+
+  /* Space / radius / elevation */
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
+  --space-5: 1.5rem;  --space-6: 2rem;   --space-7: 3rem;    --space-8: 4rem; --space-9: 6rem;
+
+  --radius-none: 0;
+  --radius-sm:   0.375rem;
+  --radius-md:   0.625rem;
+  --radius-lg:   1rem;
+  --radius-xl:   1.5rem;
+  --radius-2xl:  2rem;
+  --radius-full: 999px;
+
+  --elev-1: 0 1px 2px oklch(0 0 0 / 0.06), 0 1px 3px oklch(0 0 0 / 0.04);
+  --elev-2: 0 4px 8px -2px oklch(0 0 0 / 0.10), 0 2px 4px -2px oklch(0 0 0 / 0.06);
+  --elev-3: 0 12px 24px -8px oklch(0 0 0 / 0.18), 0 4px 8px -4px oklch(0 0 0 / 0.08);
+  --elev-4: 0 24px 48px -12px oklch(0 0 0 / 0.28), 0 8px 16px -8px oklch(0 0 0 / 0.12);
+  --elev-glow: 0 0 40px -8px color-mix(in oklch, var(--accent) 45%, transparent);
+  --elev-brutal: 4px 4px 0 0 var(--neutral-1000);
+  --elev-brutal-lg: 6px 6px 0 0 var(--neutral-1000);
+
+  --z-base: 0; --z-raised: 10; --z-floating: 20; --z-overlay: 30; --z-modal: 40; --z-toast: 50;
+
+  /* Motion */
+  --dur-instant: 0ms;
+  --dur-fast:    120ms;
+  --dur-normal:  220ms;
+  --dur-slow:    360ms;
+  --dur-slower:  520ms;
+
+  --ease-out:    cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in:     cubic-bezier(0.4, 0, 1, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Liquid glass */
+  --glass-subtle-blur:   8px;
+  --glass-standard-blur: 22px;
+  --glass-hero-blur:     40px;
+  --glass-shadow:   0 8px 24px -8px oklch(0 0 0 / 0.25), 0 2px 4px -2px oklch(0 0 0 / 0.08);
+  --glass-border:   1px solid color-mix(in oklch, var(--neutral-0) 22%, transparent);
+  --glass-specular: inset 0 1px 0 color-mix(in oklch, var(--neutral-0) 40%, transparent),
+                    inset 0 -1px 0 color-mix(in oklch, var(--neutral-0) 8%, transparent);
+}
+
+/* Reduced motion — non-negotiable */
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 1ms; --dur-normal: 1ms; --dur-slow: 1ms; --dur-slower: 1ms; }
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =========================================================
+   MODE SKINS — the curve
+   Switch by setting data-mode on <html> or any region
+   ========================================================= */
+[data-mode="left"] {
+  --mode-name: "left · minimal";
+  --surface-base:   var(--neutral-0);
+  --surface-raised: var(--neutral-0);
+  --surface-sunken: var(--neutral-50);
+  --text-primary:   var(--neutral-1000);
+  --text-secondary: var(--neutral-600);
+  --text-muted:     var(--neutral-500);
+  --border-subtle:  var(--neutral-200);
+  --border-strong:  var(--neutral-300);
+  --font-display:   var(--font-display-left);
+  --radius-default: var(--radius-none);
+  --card-border:    1px solid var(--neutral-200);
+  --card-shadow:    none;
+}
+[data-mode="middle"] {
+  --mode-name: "middle · liquid glass";
+  --surface-base:   var(--neutral-950);
+  --surface-raised: var(--neutral-900);
+  --surface-sunken: var(--neutral-1000);
+  --text-primary:   var(--neutral-50);
+  --text-secondary: var(--neutral-300);
+  --text-muted:     var(--neutral-400);
+  --border-subtle:  var(--neutral-800);
+  --border-strong:  var(--neutral-700);
+  --font-display:   var(--font-display-middle);
+  --radius-default: var(--radius-lg);
+  --card-border:    1px solid var(--neutral-800);
+  --card-shadow:    var(--elev-2);
+}
+[data-mode="right"] {
+  --mode-name: "right · cartoon";
+  --surface-base:   oklch(0.97 0.04 85);
+  --surface-raised: var(--neutral-0);
+  --surface-sunken: oklch(0.93 0.05 85);
+  --text-primary:   var(--neutral-1000);
+  --text-secondary: var(--neutral-800);
+  --text-muted:     var(--neutral-600);
+  --border-subtle:  var(--neutral-1000);
+  --border-strong:  var(--neutral-1000);
+  --font-display:   var(--font-display-right);
+  --radius-default: var(--radius-xl);
+  --card-border:    3px solid var(--neutral-1000);
+  --card-shadow:    var(--elev-brutal);
+}
