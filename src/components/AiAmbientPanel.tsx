@@ -18,7 +18,7 @@ export async function AiAmbientPanel() {
       style={{
         position: "relative",
         borderRadius: "var(--radius-2xl)",
-        padding: "var(--space-8) var(--space-6)",
+        padding: "var(--space-6) var(--space-5)",
         background: "oklch(0.13 0.010 85)",
         color: "var(--neutral-100)",
         overflow: "hidden",
@@ -59,7 +59,7 @@ export async function AiAmbientPanel() {
           backdropFilter: "blur(32px) saturate(1.5)",
           WebkitBackdropFilter: "blur(32px) saturate(1.5)",
           borderRadius: "var(--radius-xl)",
-          padding: "var(--space-6)",
+          padding: "var(--space-5)",
           boxShadow:
             "0 0 80px -12px color-mix(in oklch, var(--accent) 45%, transparent)",
           border: "none",
@@ -72,7 +72,7 @@ export async function AiAmbientPanel() {
             textTransform: "uppercase",
             letterSpacing: "var(--tracking-mega)",
             color: "var(--accent-300)",
-            marginBottom: "var(--space-4)",
+            marginBottom: "var(--space-3)",
             display: "flex",
             alignItems: "center",
             gap: "var(--space-2)",
@@ -157,7 +157,7 @@ export async function AiAmbientPanel() {
 
         <div
           style={{
-            marginTop: "var(--space-5)",
+            marginTop: "var(--space-4)",
             padding: "var(--space-3) var(--space-4)",
             borderRadius: "var(--radius-md)",
             background: "color-mix(in oklch, var(--accent) 14%, transparent)",

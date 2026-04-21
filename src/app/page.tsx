@@ -12,7 +12,7 @@ const container: React.CSSProperties = {
 };
 
 const sectionPadding: React.CSSProperties = {
-  padding: "var(--space-9) 0",
+  padding: "var(--space-7) 0",
   borderTop: "1px solid var(--border-subtle)",
 };
 
@@ -30,7 +30,7 @@ const sectionTitle: React.CSSProperties = {
   fontSize: "var(--text-4xl)",
   letterSpacing: "var(--tracking-tight)",
   color: "var(--neutral-0)",
-  marginBottom: "var(--space-4)",
+  marginBottom: "var(--space-3)",
   maxWidth: "28ch",
 };
 
@@ -50,7 +50,7 @@ export default function Home() {
         <div style={container}>
           <div style={eyebrow}>ventures · built in public</div>
           <h2 style={sectionTitle}>Public portfolio.</h2>
-          <p style={{ ...bodyText, marginBottom: "var(--space-7)" }}>
+          <p style={{ ...bodyText, marginBottom: "var(--space-5)" }}>
             Every venture is a node on the same system — apps, a podcast, a
             newsletter, a consultancy. Each one ships in public, and the list
             keeps growing.
@@ -73,7 +73,7 @@ export default function Home() {
         <div style={container}>
           <div style={eyebrow}>channels · follow the work</div>
           <h2 style={sectionTitle}>Where it ships.</h2>
-          <p style={{ ...bodyText, marginBottom: "var(--space-6)" }}>
+          <p style={{ ...bodyText, marginBottom: "var(--space-5)" }}>
             Long-form on YouTube and Substack, clips on IG and X, the podcast
             on Spotify. Pick your poison.
           </p>
@@ -92,7 +92,7 @@ export default function Home() {
             compound the audience, and the apps are the experiments that
             become the proof.
           </p>
-          <p style={{ ...bodyText, marginBottom: "var(--space-7)" }}>
+          <p style={{ ...bodyText, marginBottom: "var(--space-5)" }}>
             Every build here uses the same design system. Every output is a
             byproduct of the work. The site you're reading is the first
             surface — the rest of the ventures are rolling onto it.
@@ -105,7 +105,7 @@ export default function Home() {
         <div style={container}>
           <div style={eyebrow}>contact · low-friction</div>
           <h2 style={sectionTitle}>Send a signal.</h2>
-          <p style={{ ...bodyText, marginBottom: "var(--space-6)" }}>
+          <p style={{ ...bodyText, marginBottom: "var(--space-5)" }}>
             Consulting inquiry, podcast pitch, collaboration, or a question
             about one of the ventures — all land in the same inbox. Short is
             fine.

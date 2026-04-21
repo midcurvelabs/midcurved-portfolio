@@ -5,7 +5,7 @@ export function Hero() {
     <header
       style={{
         position: "relative",
-        padding: "var(--space-9) 0 var(--space-8)",
+        padding: "var(--space-8) 0 var(--space-7)",
         overflow: "hidden",
         isolation: "isolate",
       }}

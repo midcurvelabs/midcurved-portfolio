@@ -69,7 +69,7 @@ function ChannelCard({ channel }: { channel: Channel }) {
 
 export function ChannelsStrip() {
   return (
-    <div style={{ display: "grid", gap: "var(--space-6)" }}>
+    <div style={{ display: "grid", gap: "var(--space-5)" }}>
       {CHANNEL_GROUPS.map((group) => {
         const items = CHANNELS.filter((c) => c.group === group.key);
         if (items.length === 0) return null;
