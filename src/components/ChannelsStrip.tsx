@@ -40,7 +40,11 @@ export function ChannelsStrip() {
               <div className="mc-ch-label">{group.label}</div>
               <div className="mc-ch-blurb">{group.blurb}</div>
             </div>
-            <div className="mc-ch-cards">
+            <div
+              className={`mc-ch-cards${
+                items.length === 4 ? " mc-ch-cards--2col" : ""
+              }`}
+            >
               {items.map((c) => (
                 <ChannelCard key={c.id} channel={c} />
               ))}
@@ -107,6 +111,10 @@ export function ChannelsStrip() {
           .mc-ch-group {
             grid-template-columns: 240px 1fr;
             gap: var(--space-5);
+          }
+          .mc-ch-cards--2col {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
           }
         }
       `}</style>
