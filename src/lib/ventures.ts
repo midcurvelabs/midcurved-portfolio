@@ -56,7 +56,7 @@ export const VENTURES: Venture[] = [
     oneLiner:
       "Belgian AI consultancy. Scan operations, install AI workflows, hand teams a working stack that pays back in weeks.",
     href: "https://beclaire.be",
-    hrefStatus: "todo",
+    hrefStatus: "confirmed",
   },
   {
     id: "accountability",
@@ -66,8 +66,8 @@ export const VENTURES: Venture[] = [
     accentHex: "oklch(0.82 0.20 85)",
     oneLiner:
       "A habit tracker that makes discipline feel like play. Cartoon mode by default, dark mode for nights. Streaks that actually feel good.",
-    href: "#",
-    hrefStatus: "todo",
+    href: "https://accountability.midcurved.com",
+    hrefStatus: "confirmed",
   },
   {
     id: "hotcold",
