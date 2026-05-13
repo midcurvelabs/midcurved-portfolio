@@ -69,28 +69,6 @@ export const VENTURES: Venture[] = [
     href: "https://accountability.midcurved.com",
     hrefStatus: "confirmed",
   },
-  {
-    id: "hotcold",
-    name: "Hot & Cold",
-    mode: "right",
-    accentVar: "--venture-hotcold",
-    accentHex: "oklch(0.82 0.20 85)",
-    oneLiner:
-      "Contrast therapy tracker. Log every cold plunge and sauna session, honestly. Watch what alternating ice and heat does to your week.",
-    href: "#",
-    hrefStatus: "todo",
-  },
-  {
-    id: "predictmrr",
-    name: "PredictMRR",
-    mode: "middle",
-    accentVar: "--venture-predictmrr",
-    accentHex: "oklch(0.82 0.20 85)",
-    oneLiner:
-      "MRR prediction for SaaS founders. Stop guessing next month's number. Upload the CSV, get the range.",
-    href: "#",
-    hrefStatus: "todo",
-  },
 ];
 
 export const MIDCURVED_ONELINER =
