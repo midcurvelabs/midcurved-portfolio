@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Bricolage_Grotesque, JetBrains_Mono, Caprasimo } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
@@ -43,6 +43,13 @@ export const metadata: Metadata = {
     title: "midcurved",
     description: "Builder media studio and product lab.",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  colorScheme: "dark",
+  themeColor: "#080704",
 };
 
 export default function RootLayout({

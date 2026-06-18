@@ -118,6 +118,36 @@ export function ChannelsStrip() {
             justify-content: start;
           }
         }
+        @media (max-width: 760px) {
+          .mc-ch-root { gap: var(--space-3); }
+          .mc-ch-group {
+            padding: var(--space-4) 0;
+            border-bottom: 1px solid color-mix(in oklch, var(--accent) 16%, transparent);
+          }
+          .mc-ch-group:first-child { padding-top: 0; }
+          .mc-ch-group:last-child {
+            padding-bottom: 0;
+            border-bottom: 0;
+          }
+          .mc-ch-blurb {
+            max-width: 30ch;
+            line-height: 1.45;
+          }
+          .mc-ch-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-2);
+            margin-top: var(--space-2);
+          }
+          .mc-ch-card {
+            width: 100%;
+            min-height: 48px;
+            padding: var(--space-3) var(--space-4);
+            background: color-mix(in oklch, var(--neutral-0) 5%, transparent);
+            border-color: color-mix(in oklch, var(--accent) 20%, transparent);
+          }
+          .mc-ch-arrow { margin-left: auto; }
+        }
       `}</style>
     </div>
   );
