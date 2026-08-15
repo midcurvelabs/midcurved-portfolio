@@ -57,6 +57,13 @@ const BOARD = [
     status: "in play",
     line: "LDR game for couples. Dogfooded.",
   },
+  {
+    rank: "09",
+    name: "GodMode Studio",
+    href: null,
+    status: "in play",
+    line: "Pre to post production studio for the show. Docket to content kit. Still being rebuilt.",
+  },
 ] as const;
 
 const GRAVEYARD = [
@@ -180,7 +187,7 @@ export default function Home() {
                 <span className="mono">compounding</span>
               </div>
               <div className="chip">
-                <b>4</b>
+                <b>5</b>
                 <span className="mono">in play</span>
               </div>
               <div className="chip">
