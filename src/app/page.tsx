@@ -264,7 +264,7 @@ export default function Home() {
             </ol>
             <p className="note">
               Side bets: DirtyLingo, Distance Games, SideKick. Everything else
-              is parked or buried on purpose. Remote.
+              is parked or buried on purpose. Bansko, Bulgaria.
             </p>
           </div>
         </section>
@@ -305,8 +305,8 @@ export default function Home() {
             <div className="parked">
               <p className="mono">also shipped / parked</p>
               <p>
-                30x30 · Accountability OS · TheRikOS · Noyal · Banskonnect · PRD
-                Generator · TAO Wiki · Creator Launch
+                30x30 · Accountability OS · TheRikOS · Noyal · PredictMRR · Hot
+                & Cold · Banskonnect · PRD Generator · TAO Wiki · Creator Launch
               </p>
             </div>
           </div>
@@ -359,6 +359,22 @@ export default function Home() {
                   <p>{item.line}</p>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="human" className="section">
+          <div className="shell">
+            <p className="kicker mono">
+              <Crosshair />
+              offline
+            </p>
+            <h2>Still a person.</h2>
+            <div className="prose">
+              <p>
+                Pizza chef. Shooting pics and videos. Sauna and cold plunge
+                addict. Frisbee.
+              </p>
             </div>
           </div>
         </section>
