@@ -1,66 +1,53 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Bricolage_Grotesque, JetBrains_Mono, Caprasimo } from "next/font/google";
-import "./globals.css";
+import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
+import "./ledger.css";
 import { Providers } from "./providers";
 
-const inter = Inter({
-  variable: "--font-inter",
+const display = Space_Grotesk({
+  variable: "--font-display",
   subsets: ["latin"],
   display: "swap",
 });
-const bricolage = Bricolage_Grotesque({
-  variable: "--font-bricolage",
+
+const mono = IBM_Plex_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
-  display: "swap",
-});
-const jetbrains = JetBrains_Mono({
-  variable: "--font-jetbrains",
-  subsets: ["latin"],
-  display: "swap",
-});
-const caprasimo = Caprasimo({
-  variable: "--font-caprasimo",
-  subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "midcurved — builder media studio + product lab",
+  title: "Rik Eerdekens — midcurved",
   description:
-    "Apps, podcast, YouTube, newsletter. One brand, shipped in public. A portfolio of ventures built on the Curve design system.",
+    "I build products. The dead ones stay on the board. Builder, operator, and creator. GodModePod, BeClaire, RikGPT, vibecode.fun.",
   metadataBase: new URL("https://midcurved.com"),
   openGraph: {
-    title: "midcurved",
+    title: "Rik Eerdekens — midcurved",
     description:
-      "Builder media studio and product lab. Apps, podcast, YouTube, newsletter. One brand, shipped in public.",
+      "I build products. The dead ones stay on the board.",
     url: "https://midcurved.com",
     siteName: "midcurved",
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
-    title: "midcurved",
-    description: "Builder media studio and product lab.",
+    card: "summary",
+    title: "Rik Eerdekens — midcurved",
+    description: "I build products. The dead ones stay on the board.",
   },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  colorScheme: "dark",
-  themeColor: "#080704",
+  colorScheme: "light",
+  themeColor: "#F3F2ED",
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      data-mode="middle"
-      className={`${inter.variable} ${bricolage.variable} ${jetbrains.variable} ${caprasimo.variable}`}
-    >
+    <html lang="en" className={`${display.variable} ${mono.variable}`}>
       <body>
         <Providers>{children}</Providers>
       </body>
