@@ -31,38 +31,38 @@ const BOARD = [
   },
   {
     rank: "05",
+    name: "GodMode Studio",
+    href: null,
+    status: "in play",
+    line: "Pre to post production studio for the show. Docket to content kit. Still being rebuilt.",
+  },
+  {
+    rank: "06",
     name: "TestDrive",
     href: null,
     status: "in play",
     line: "Paid expert feedback and creator campaigns for indie products.",
   },
   {
-    rank: "06",
+    rank: "07",
     name: "SideKick",
     href: "https://sidekick.midcurved.com",
     status: "in play",
     line: "Voice interviewer for creators filming alone. Closed beta.",
   },
   {
-    rank: "07",
+    rank: "08",
     name: "DirtyLingo",
     href: null,
     status: "in play",
     line: "Adult Portuguese, the way people actually talk.",
   },
   {
-    rank: "08",
+    rank: "09",
     name: "Distance Games",
     href: "https://distancegames.midcurved.com",
     status: "in play",
     line: "LDR game for couples. Dogfooded.",
-  },
-  {
-    rank: "09",
-    name: "GodMode Studio",
-    href: null,
-    status: "in play",
-    line: "Pre to post production studio for the show. Docket to content kit. Still being rebuilt.",
   },
 ] as const;
 
@@ -248,6 +248,10 @@ export default function Home() {
               <li>
                 <strong>GodModePod</strong>
                 <span>Weekly AI / crypto / builder show. The public voice.</span>
+              </li>
+              <li>
+                <strong>GodMode Studio</strong>
+                <span>Production studio for the show. Pre to post. Still being rebuilt.</span>
               </li>
               <li>
                 <strong>RikGPT</strong>
