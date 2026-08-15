@@ -373,7 +373,7 @@ export default function Home() {
             <div className="prose">
               <p>
                 Pizza chef. Shooting pics and videos. Sauna and cold plunge
-                addict. Frisbee.
+                addict. Ultimate frisbee player.
               </p>
             </div>
           </div>
