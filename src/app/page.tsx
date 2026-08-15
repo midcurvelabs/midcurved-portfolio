@@ -79,72 +79,58 @@ const GRAVEYARD = [
     lesson: "Do not ship a second front door for the same itch.",
   },
   {
-    name: "AgentOS",
-    year: "2026",
-    blurb: "Personal agent dashboard. Scaffold energy, no user.",
-    lesson: "Infra for yourself is a vault, not a startup.",
+    name: "Blockcareers",
+    year: "2023",
+    blurb: "Crypto job board. Co-founded it. Five months, no MVP. The developer never delivered.",
+    lesson: "If you cannot see the work, there is no work.",
   },
   {
-    name: "HouseZero",
-    year: "2026",
-    blurb: "A house fantasy with no restart trigger.",
-    lesson: "If it needs a villa to be true, it is not a v1.",
-  },
-  {
-    name: "Reddit Agent",
-    year: "2026",
-    blurb: "Playbook, no build, honest-risk unresolved.",
-    lesson: "Undisclosed AI on Reddit is a values decision, not a feature.",
-  },
-  {
-    name: "Adaptive Fitness Coach",
-    year: "2026",
-    blurb: "The flagship of a 12-app iOS plan. Never shipped.",
-    lesson: "200 funded competitors plus none of your audience is not a flagship.",
-  },
-  {
-    name: "AI Game with Memory",
-    year: "2026",
-    blurb: "Never shipped. Games are a different sport.",
-    lesson: "Your YouTube is not an App Store channel.",
-  },
-  {
-    name: "Duolingo-for-Drawing",
-    year: "2026",
-    blurb: "Consumer edtech. Never shipped.",
-    lesson: "Do not enter a category your distribution cannot move.",
+    name: "The hedge fund",
+    year: "2023",
+    blurb: "Same partner as Blockcareers. He brought capital, I tested trades. It never became a fund.",
+    lesson: "A partner and a plan is not a company.",
   },
 ] as const;
 
 const RECORD = [
   {
     name: "WeRate",
-    role: "Solana",
+    meta: "2025",
     line: "Solana-native rating product. GTM and community with the team.",
   },
   {
     name: "Qualoo",
-    role: "CMO",
+    meta: "CMO · 2024–2025",
     line: "Pre-seed DePIN. More operator than CMO. Left when the work drained more than it built.",
   },
   {
     name: "Alpaca Network",
-    role: "Advisor",
+    meta: "Advisor · 2024–2025",
     line: "Hands-on through token launch. $1.5M raise / $3M FDV.",
   },
   {
     name: "Enjinstarter",
-    role: "CMO",
+    meta: "CMO · 2024",
     line: "Joined a burned community. Rebuilt sentiment with content and live programming.",
   },
   {
+    name: "Blockcareers",
+    meta: "Co-Founder · 2023",
+    line: "Tried to build a crypto job board. It failed. Then a hedge fund with the same partner that never actually happened.",
+  },
+  {
+    name: "Nomad years",
+    meta: "2022",
+    line: "Travel and content. Thailand and the road. No job. The year that broke the Belgian default.",
+  },
+  {
     name: "PAID Network",
-    role: "Head of Marketing & Community",
+    meta: "Head of Marketing & Community · 2021",
     line: "75+ Ignition launches in 11 months. Public account ~30k to ~135k.",
   },
   {
     name: "Boondoggle",
-    role: "Consultant → PM",
+    meta: "Consultant → PM · 2019–2020",
     line: "Where the project-management journey started. Agency years. Process and clients.",
   },
 ] as const;
@@ -198,7 +184,7 @@ export default function Home() {
                 <span className="mono">in play</span>
               </div>
               <div className="chip">
-                <b>9</b>
+                <b>5</b>
                 <span className="mono">buried</span>
               </div>
             </div>
@@ -350,15 +336,15 @@ export default function Home() {
               <Crosshair />
               the record
             </p>
-            <h2>Work I did on other people&apos;s boards.</h2>
+            <h2>The years.</h2>
             <p className="prose">
-              I did not own these. I did run them.
+              Jobs, a year on the road, a startup that died. Nothing skipped.
             </p>
             <div className="cards">
               {RECORD.map((item) => (
                 <article key={item.name} className="card">
                   <h3>{item.name}</h3>
-                  <span className="done mono">{item.role} · done</span>
+                  <span className="done mono">{item.meta}</span>
                   <p>{item.line}</p>
                 </article>
               ))}

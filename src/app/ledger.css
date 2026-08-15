@@ -345,6 +345,8 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 .done {
   color: var(--muted);
+  text-align: right;
+  white-space: nowrap;
 }
 
 .note {
@@ -389,6 +391,10 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   .record .card {
     grid-template-columns: 1fr;
     gap: 0.35rem;
+  }
+  .done {
+    white-space: normal;
+    text-align: left;
   }
   .hero { padding-top: 3rem; }
 }
