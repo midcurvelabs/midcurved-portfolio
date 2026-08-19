@@ -2,6 +2,13 @@ import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
 import "./ledger.css";
 import { Providers } from "./providers";
+import {
+  PERSON_DESCRIPTION,
+  PERSON_NAME,
+  SITE_ORIGIN,
+  SITE_URL,
+  jsonLd,
+} from "@/lib/person";
 
 const display = Space_Grotesk({
   variable: "--font-display",
@@ -17,21 +24,24 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rik Eerdekens — midcurved",
-  description:
-    "I build products. The dead ones stay on the board. Builder, operator, and creator. GodModePod, BeClaire, RikGPT, vibecode.fun.",
-  metadataBase: new URL("https://midcurved.com"),
+  title: `${PERSON_NAME} — midcurved`,
+  description: PERSON_DESCRIPTION,
+  metadataBase: new URL(SITE_ORIGIN),
+  alternates: {
+    canonical: SITE_URL,
+  },
+  authors: [{ name: PERSON_NAME, url: SITE_URL }],
   openGraph: {
-    title: "Rik Eerdekens — midcurved",
-    description:
-      "I build products. The dead ones stay on the board.",
-    url: "https://midcurved.com",
+    title: `${PERSON_NAME} — midcurved`,
+    description: "I build products. The dead ones stay on the board.",
+    url: SITE_URL,
     siteName: "midcurved",
     type: "website",
+    locale: "en_US",
   },
   twitter: {
     card: "summary",
-    title: "Rik Eerdekens — midcurved",
+    title: `${PERSON_NAME} — midcurved`,
     description: "I build products. The dead ones stay on the board.",
   },
 };
@@ -49,6 +59,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${display.variable} ${mono.variable}`}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Providers>{children}</Providers>
       </body>
     </html>
